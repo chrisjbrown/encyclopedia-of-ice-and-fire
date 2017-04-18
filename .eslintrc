@@ -9,7 +9,22 @@
     ],
     "rules": {
         "no-underscore-dangle": "off",
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "class-methods-use-this": ["error", {
+            "exceptMethods": [
+                "render",
+                "getInitialState",
+                "getDefaultProps",
+                "getChildContext",
+                "componentWillMount",
+                "componentDidMount",
+                "componentWillReceiveProps",
+                "shouldComponentUpdate",
+                "componentWillUpdate",
+                "componentDidUpdate",
+                "componentWillUnmount"
+            ]
+        }]
     },
     "settings": {
         "import/resolver": {
